@@ -570,6 +570,16 @@ section {
     padding-left: 1.5rem;
 }
 
+.credential-issuer {
+    color: var(--primary-light);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+.credential-link {
+    margin-top: var(--spacing-sm);
+}
+
 .skill-card li::before {
     content: '▹';
     position: absolute;
@@ -808,6 +818,9 @@ section {
 .project-footer {
     padding: var(--spacing-md);
     padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
 }
 
 .project-link {

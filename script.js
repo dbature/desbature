@@ -4,12 +4,38 @@
 
 const projects = [
     {
+        id: 11,
+        title: "Learner Risk Segmentation (MSc Capstone)",
+        tools: ["Python", "XGBoost", "SHAP", "Fairlearn", "MLflow", "FastAPI", "Streamlit", "Docker"],
+        category: ["ml", "python"],
+        description: "End-to-end early-warning system that predicts course non-completion from behaviour observable by day 30, segments learners by engagement trajectory with K-Means, and ranks a coach caseload under a capacity limit. Fairness is audited rather than assumed: a Fairlearn equal-opportunity gate blocks promotion of any model that fails it. Includes a Prefect + Great Expectations data pipeline, MLflow model registry, SHAP/LIME explanations, a FastAPI prediction service, drift monitoring, and CI/CD. Built on the Open University Learning Analytics Dataset.",
+        link: "https://learner-risk-segmentation.streamlit.app",
+        repo: "https://github.com/dbature/learner-risk-segmentation"
+    },
+    {
         id: 10,
         title: "F1 Analytics Dashboard",
         tools: ["Next.js", "TypeScript", "Power BI", "DAX", "Vega-Lite", "Vercel"],
         category: ["powerbi", "fullstack"],
         description: "Formula 1 analytics platform serving a Power BI semantic model to the open web — no Microsoft account or Power BI license needed to view it. Next.js App Router queries the model server-side through a service principal and a fixed, allowlisted query API, so the browser never touches Power BI or sends raw DAX. Includes driver and constructor standings, race calendar, head-to-head comparison, and multi-season trend analysis, with light/dark theming and shareable season URLs.",
-        link: "https://f1dashboard.nexdataconsulting.ng"
+        link: "https://f1dashboard.nexdataconsulting.ng",
+        repo: "https://github.com/dbature/F1_Dashboard"
+    },
+    {
+        id: 13,
+        title: "Breast Cancer Diagnosis with an Artificial Neural Network",
+        tools: ["Python", "TensorFlow", "Keras", "Scikit-learn"],
+        category: ["ml", "python"],
+        description: "TensorFlow/Keras neural network that classifies breast masses as malignant or benign from 30 cell-nucleus features, designed as a triage aid that flags likely malignant cases for priority review. Compares a baseline network against an improved model with dropout and L2 regularization, evaluated on accuracy, precision, recall, F1, ROC-AUC and confusion matrices, with a full unit test suite.",
+        link: "https://github.com/dbature/ANN_BreastCancer_App"
+    },
+    {
+        id: 14,
+        title: "Lymphoma Gene Expression Clustering (K-Means)",
+        tools: ["Python", "NumPy", "K-Means", "PCA", "Matplotlib"],
+        category: ["ml", "python"],
+        description: "Unsupervised clustering of diffuse large B-cell lymphoma tumor samples by RNA-Seq gene expression, using data pulled directly from the NCI Genomic Data Commons API. K-Means (with k-means++ initialization), PCA and silhouette scoring are implemented from scratch in NumPy and covered by 22 unit tests.",
+        link: "https://github.com/dbature/K-Means-Python-Application"
     },
     {
         id: 1,
@@ -25,7 +51,8 @@ const projects = [
         tools: ["Python", "Scikit-learn", "PCA", "Logistic Regression"],
         category: ["python", "ml"],
         description: "Machine learning model for breast cancer prediction utilizing Principal Component Analysis (PCA) for dimensionality reduction and logistic regression for classification. Achieved high accuracy in distinguishing between malignant and benign tumors.",
-        link: "https://colab.research.google.com/drive/1AHS96fDz1qzXMXVUvy2VATs2KU7XJeix?usp=sharing"
+        link: "https://colab.research.google.com/drive/1AHS96fDz1qzXMXVUvy2VATs2KU7XJeix?usp=sharing",
+        repo: "https://github.com/dbature/Principal-Component-Analysis"
     },
     {
         id: 3,
@@ -33,7 +60,8 @@ const projects = [
         tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
         category: ["python"],
         description: "In-depth analysis of the global data science job market, exploring salary trends, required skills, geographic distribution, and industry demands. Provides insights into emerging technologies and career opportunities in the data science field.",
-        link: "https://colab.research.google.com/drive/1lmth1wgBCOlzjLoc-HXr2dVNNhPVY2i1?usp=sharing"
+        link: "https://colab.research.google.com/drive/1lmth1wgBCOlzjLoc-HXr2dVNNhPVY2i1?usp=sharing",
+        repo: "https://github.com/dbature/-DataScience-Jobs-Market-Analysis"
     },
     {
         id: 4,
@@ -52,20 +80,13 @@ const projects = [
         link: "https://app.powerbi.com/view?r=eyJrIjoiM2UyZjgwMWEtOGY5Yy00NGY4LThjOGYtMmQ2YjliNzQzYTM3IiwidCI6Ijg2MjZhNDc3LTk1YjctNDVhMi1hNjNlLWFkY2M1Mjk3ODlkYiIsImMiOjN9"
     },
     {
-        id: 6,
-        title: "Christmas Sales Trend Analysis",
-        tools: ["PowerBI", "Power Query", "DAX"],
-        category: ["powerbi"],
-        description: "Seasonal sales analytics dashboard tracking Christmas shopping trends, revenue patterns, and consumer behavior. Includes year-over-year comparisons, product category performance, and predictive insights for inventory planning.",
-        link: "https://app.powerbi.com/view?r=eyJrIjoiZjU1MmM0ZGEtYTRhZC00MzMwLTlhZjAtNjZiNWFmY2M1Mjk3ODlkYiIsImMiOjN9"
-    },
-    {
         id: 7,
         title: "Netflix Data Analysis",
         tools: ["Python", "Pandas", "Data Visualization"],
         category: ["python"],
         description: "Exploratory data analysis of Netflix content library, examining content distribution by genre, country, release year, and ratings. Identifies trends in content production and provides insights into streaming platform strategies.",
-        link: "https://colab.research.google.com/drive/1OW4gys_iFjME9T4KBNtl7AwgVdaNMFJe?usp=sharing"
+        link: "https://colab.research.google.com/drive/1OW4gys_iFjME9T4KBNtl7AwgVdaNMFJe?usp=sharing",
+        repo: "https://github.com/dbature/Netflix-Data-Visualization"
     },
     {
         id: 8,
@@ -73,7 +94,8 @@ const projects = [
         tools: ["Next.js", "TypeScript", "Supabase", "React", "Tailwind CSS"],
         category: ["fullstack"],
         description: "Full-stack web application streamlining sales tracking and inventory management for Nigerian businesses. Features real-time sales tracking with automatic inventory updates, role-based access control for admins and sales agents, comprehensive profit analytics dashboard, and mobile-responsive design. Built with Next.js 15, TypeScript, Supabase (PostgreSQL), and deployed on Vercel.",
-        link: "https://profitpro.vercel.app"
+        link: "https://profitpro.vercel.app",
+        repo: "https://github.com/dbature/profitpro"
     },
     {
         id: 9,
@@ -81,7 +103,32 @@ const projects = [
         tools: ["HTML", "CSS", "JavaScript", "Vercel"],
         category: ["fullstack"],
         description: "Modern, responsive portfolio website showcasing data science and full-stack development projects. Features dynamic project pagination, categorized project pages, smooth animations, and professional SEO optimization. Built with vanilla JavaScript for optimal performance and deployed on Vercel with CI/CD integration.",
-        link: "https://desbature.vercel.app"
+        link: "https://desbature.vercel.app",
+        repo: "https://github.com/dbature/desbature"
+    },
+    {
+        id: 15,
+        title: "Healthcare Product Launch: Income & Spending Analysis",
+        tools: ["Python", "Flask", "MongoDB", "Pandas"],
+        category: ["fullstack", "python"],
+        description: "Flask web application that collects survey data on income and household spending into MongoDB, paired with a Jupyter analysis of the collected data to inform the launch of a new healthcare product.",
+        link: "https://github.com/dbature/Flask-Healthcare-Application"
+    },
+    {
+        id: 16,
+        title: "Fashion MNIST Image Classification with a CNN",
+        tools: ["Python", "TensorFlow", "Keras", "CNN"],
+        category: ["ml", "python"],
+        description: "Convolutional neural network that classifies 70,000 grayscale clothing images into 10 categories. Covers preprocessing (reshaping, normalization, one-hot encoding), a two-layer convolutional architecture with max-pooling, and visualized predictions on the test set.",
+        link: "https://github.com/dbature/Module-6-Assignment-Fashion-MNIST-Classification"
+    },
+    {
+        id: 17,
+        title: "Insurance Policy Management System",
+        tools: ["Python", "OOP"],
+        category: ["python"],
+        description: "Object-oriented Python system for an insurance company to manage policyholders, products and payments: registering, suspending and reactivating policyholders and products, processing payments, sending reminders and applying late-payment penalties.",
+        link: "https://github.com/dbature/Policy-Management-System"
     }
 ];
 
@@ -209,6 +256,13 @@ function createProjectCard(project) {
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
             </a>
+            ${project.repo ? `
+            <a href="${project.repo}" target="_blank" rel="noopener noreferrer" class="project-link">
+                View Code
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+                </svg>
+            </a>` : ''}
         </div>
     `;
 
@@ -448,7 +502,7 @@ function animateCounter(element, target, duration = 2000) {
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            const statNumbers = entry.target.querySelectorAll('.stat-number[data-target]');
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-target'));
                 animateCounter(stat, target);
